@@ -39,6 +39,8 @@ def scrape_quora(url):
 
 if __name__ == "__main__":
     quora_url = "https://www.quora.com/What-are-the-trending-sub-fields-of-electrical-and-computer-engineering-industry-in-Canada"
+        # quora_url = "https://www.quora.com/search?q=case%20studies%20in%20machine%20learning%20%20"
+    
     questions = scrape_quora(quora_url)
 
     print("Questions and Answer:")
