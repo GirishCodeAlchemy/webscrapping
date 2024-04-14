@@ -21,7 +21,7 @@ def scrape_quora(url):
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
+        time.sleep(30)
         new_height = driver.execute_script("return document.body.scrollHeight")
         if new_height == last_height:
             break
@@ -40,7 +40,7 @@ def scrape_quora(url):
 if __name__ == "__main__":
     quora_url = "https://www.quora.com/What-are-the-trending-sub-fields-of-electrical-and-computer-engineering-industry-in-Canada"
         # quora_url = "https://www.quora.com/search?q=case%20studies%20in%20machine%20learning%20%20"
-    
+
     questions = scrape_quora(quora_url)
 
     print("Questions and Answer:")
